@@ -16,8 +16,8 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "uk-UA",
-    baseUrl: "fix me later",
-    ignorePatterns: ["private", "journal", "templates", ".obsidian"],
+    baseUrl: "localhost",
+    ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
       fontOrigin: "googleFonts",
@@ -61,8 +61,8 @@ const config: QuartzConfig = {
       }),
       Plugin.SyntaxHighlighting({
         theme: {
-          light: "github-light",
-          dark: "github-dark",
+          light: "catppucin-latte",
+          dark: "catppuccin-mocha",
         },
         keepBackground: false,
       }),
