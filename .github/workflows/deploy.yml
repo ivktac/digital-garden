@@ -23,7 +23,7 @@ jobs:
       - name: Force pull latest submodule content
         run: |
           cd content
-          git remote set-url origin https://github.com/YOUR_USERNAME/content-repo.git
+          git remote set-url origin https://github.com/ivktac/notes.git
           git fetch origin
           git reset --hard origin/main
           cd ..
