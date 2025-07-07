@@ -20,9 +20,13 @@ jobs:
           submodules: true
           token: ${{ secrets.PERSONAL_TOKEN }}
 
-      - name: Pull latest content
+      - name: Force pull latest submodule content
         run: |
-          git submodule update --remote --merge
+          cd content
+          git remote set-url origin https://github.com/YOUR_USERNAME/content-repo.git
+          git fetch origin
+          git reset --hard origin/main
+          cd ..
 
       - name: Commit updated submodule reference
         run: |
